@@ -18,5 +18,26 @@ if(RAILSIG_BUILD_TESTS)
     enable_testing()
 endif()
 
+FetchContent_Declare(
+        SDL3
+        GIT_REPOSITORY https://github.com/libsdl-org/SDL.git
+        GIT_TAG release-3.2.8
+        GIT_SHALLOW TRUE
+)
+set(SDL_SHARED OFF CACHE BOOL "" FORCE)
+set(SDL_STATIC ON CACHE BOOL "" FORCE)
+FetchContent_MakeAvailable(SDL3)
+
+FetchContent_Declare(
+        imgui
+        GIT_REPOSITORY https://github.com/ocornut/imgui.git
+        GIT_TAG v1.91.8-docking
+        GIT_SHALLOW TRUE
+        SOURCE_SUBDIR ""
+)
+FetchContent_MakeAvailable(imgui)
+
 add_subdirectory(libs/topology)
+add_subdirectory(libs/ui_core)
 add_subdirectory(apps/simulator)
+add_subdirectory(apps/tester)
