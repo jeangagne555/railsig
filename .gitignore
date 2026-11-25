@@ -1,0 +1,11 @@
+# Build directories
+build/
+cmake-build-*/
+out/
+
+# IDE metadata
+.idea/
+.vscode/
+
+# Dependency artifacts
+_deps/
