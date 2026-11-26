@@ -4,7 +4,7 @@
 #include <cstdint>
 
 namespace railsig::topology {
-
+    
     struct NodeId {
         std::uint64_t value{};
         auto operator<=>(const NodeId&) const = default;

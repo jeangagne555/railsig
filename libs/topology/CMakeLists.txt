@@ -15,3 +15,8 @@ target_compile_features(railsig_topology PUBLIC cxx_std_23)
 if(RAILSIG_BUILD_TESTS)
     add_subdirectory(tests)
 endif()
+
+target_link_libraries(railsig_topology
+    PUBLIC
+        railsig::common
+)

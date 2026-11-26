@@ -37,6 +37,7 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(imgui)
 
+add_subdirectory(libs/common)
 add_subdirectory(libs/topology)
 add_subdirectory(libs/ui_core)
 add_subdirectory(apps/simulator)
